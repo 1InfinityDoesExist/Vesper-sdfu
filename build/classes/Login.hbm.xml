@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="DBRegister" table="login" schema="clappia">
+		<id name="sn" type="int" column="serialNo">
+			<generator class="native"></generator>
+		</id>
+
+	<property name="username" type="string" column="username"></property>
+	<property name="password" type="string" column="password"></property>
+	
+	
+	</class>
+</hibernate-mapping>

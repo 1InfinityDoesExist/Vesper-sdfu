@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="Sales" table="customer" schema="clappia">
+		<id name="invno" type="int" column="invo">
+			<generator class="native"></generator>
+		</id>
+
+	<property name="customerName" type="string" column="cname"></property>
+	<property name="customerAddres" type="string" column="cadd"></property>
+	<!-- <property name="date" type="string" column="date"></property> -->
+	<property name="dateoperation"  column="date"></property>
+	<property name="productName" type="string" column="pname"></property>
+	<property name="serialNumber" type="string" column="serialno"></property>
+	<property name="price" type="float" column="price"></property>
+	<property name="quantity" type="int" column="quant"></property>
+	<property name="toatlPrice" type="float" column="totalPrice"></property>
+	
+	</class>
+</hibernate-mapping>

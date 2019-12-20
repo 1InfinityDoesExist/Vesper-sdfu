@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="Vendor" table="vendor" schema="clappia">
+		<id name="id" type="int" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="product_name" type="string" column="pname" />
+		<property name="product_serial_number" type="string" column="pnum" />
+		<property name="quant_received" type="int" column="quant" />
+		<property name="price_per_unit" type="float" column="price" />
+<!-- 		<property name="total_price" type="float" column="GrandTotal" />-->
+ 		<property name="vendor_name" type="string" column="vname" />
+		<!-- <property name="date" type="string" column="date" /> -->
+		<property name="dateoperation" column="date"></property>
+	</class>
+</hibernate-mapping>

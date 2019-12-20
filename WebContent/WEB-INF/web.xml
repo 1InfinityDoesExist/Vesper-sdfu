@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+	<servlet>
+		<servlet-name>One</servlet-name>
+		<servlet-class>Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>One</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Two</servlet-name>
+		<servlet-class>Validator</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Two</servlet-name>
+		<url-pattern>/val</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Three</servlet-name>
+		<servlet-class>RegisterFetcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Three</servlet-name>
+		<url-pattern>/reg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Four</servlet-name>
+		<servlet-class>DBRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Four</servlet-name>
+		<url-pattern>/dbreg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Five</servlet-name>
+		<servlet-class>LogOut</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Five</servlet-name>
+		<url-pattern>/lout</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<filter-name>f1</filter-name>
+		<filter-class>UNameFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f1</filter-name>
+		<url-pattern>/reg</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>f2</filter-name>
+		<filter-class>PassFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f2</filter-name>
+		<url-pattern>/reg</url-pattern>
+	</filter-mapping>
+
+
+	<servlet>
+		<servlet-name>Six</servlet-name>
+		<servlet-class>InboundFetcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Six</servlet-name>
+		<url-pattern>/in</url-pattern>
+	</servlet-mapping>
+
+	
+	
+	<!--  *****************************************-->
+	<!-- vendor filter starts here....!!!! -->
+	<!-- <filter>
+		<filter-name>f3</filter-name>
+		<filter-class>PassFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f3</filter-name>
+		<url-pattern>/in</url-pattern>
+	</filter-mapping> -->
+	
+	<filter>
+        <filter-name>f4</filter-name>
+        <filter-class>VPNfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f4</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>f5</filter-name>
+        <filter-class>VPPUfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f5</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>f6</filter-name>
+        <filter-class>VPSNfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f6</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>f7</filter-name>
+        <filter-class>VQRfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f7</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping>
+    
+   <!--  <filter>
+        <filter-name>f8</filter-name>
+        <filter-class>VUCFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f8</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping> -->
+    
+    <filter>
+        <filter-name>f9</filter-name>
+        <filter-class>VVNfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f9</filter-name>
+        <url-pattern>/in</url-pattern>
+    </filter-mapping>
+    
+    
+    <filter>
+        <filter-name>f10</filter-name>
+        <filter-class>dbmFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f10</filter-name>
+        <url-pattern>/dbm</url-pattern>
+    </filter-mapping>
+    
+     <filter>
+        <filter-name>f11</filter-name>
+        <filter-class>ProductFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f11</filter-name>
+        <url-pattern>/ses</url-pattern>
+    </filter-mapping>
+	
+	<servlet>
+		<servlet-name>Seven</servlet-name>
+		<servlet-class>SalesFetcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Seven</servlet-name>
+		<url-pattern>/inv</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Eight</servlet-name>
+		<servlet-class>SalesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Eight</servlet-name>
+		<url-pattern>/ses</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Nine</servlet-name>
+		<servlet-class>dbmodifier</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Nine</servlet-name>
+		<url-pattern>/dbm</url-pattern>
+	</servlet-mapping>
+	
+	
+	 <servlet>
+		<servlet-name>Ten</servlet-name>
+		<servlet-class>Stracking</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ten</servlet-name>
+		<url-pattern>/straking</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Eleven</servlet-name>
+		<servlet-class>ProductBasedFilter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Eleven</servlet-name>
+		<url-pattern>/pricefilter</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Tweleve</servlet-name>
+		<servlet-class>YearBase</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tweleve</servlet-name>
+		<url-pattern>/ybase</url-pattern>
+	</servlet-mapping>
+ 
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
